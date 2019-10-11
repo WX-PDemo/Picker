@@ -1,0 +1,64 @@
+page{
+  background: #f7f7f7;
+}
+.list{
+  display: flex;
+  background: #fff;
+  padding: 20rpx 40rpx;
+}
+.list-left{
+  width: 120rpx;
+}
+.list-right{
+  flex: 1;
+}
+
+button{
+  margin-top: 200rpx;
+  width: 700rpx;
+}
+
+.placeholder{
+  color: #ccc
+}
+
+picker-view{
+  height: 560rpx;
+  width: 750rpx;
+}
+
+.picker{
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 750rpx;
+  height: 560rpx;
+  display: flex;/*弹性布局设置*/
+  background: #fff;
+  flex-wrap: wrap;/*元素换行*/
+  justify-content: center;
+}
+
+.btn-group{
+  display: flex;
+  justify-content: space-between;
+  width: 750rpx;
+  padding: 0 43rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: skyblue;
+}
+.item{
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}

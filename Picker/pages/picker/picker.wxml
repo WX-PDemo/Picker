@@ -1,0 +1,34 @@
+<view class="list">
+  <view class="list-left">地区:</view>
+  <view class="list-right {{flag ? '' : 'placeholder'}}" bindtap="showPicker">
+    <block wx:if="{{flag}}">
+      {{provinceName[provinceIndex]}} {{cityName[cityIndex]}} {{countyName[countyIndex]}}
+    </block>
+    <block wx:else>请选择所在地</block>
+  </view>
+</view>
+
+<button disabled="{{!flag}}" type="primary" bindtap="upClick">提交</button>
+
+
+<view class="picker" hidden="{{isHidden}}">
+  <view class="btn-group">
+    <view bindtap="cancleClick">取消</view>
+    <view bindtap="sureClick">确认</view>
+  </view>
+  <picker-view bindchange="pickerChange" indicator-style="height: 40rpx">
+    <picker-view-column>
+      <view wx:for="{{provinceName}}" wx:key="item" class="item">{{item}}</view>
+    </picker-view-column>
+
+    <picker-view-column>
+      <view wx:for="{{cityName}}" wx:key="item" class="item">{{item}}</view>
+    </picker-view-column>
+
+    <picker-view-column>
+      <view wx:for="{{countyName}}" wx:key="item" class="item">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<view class="mask" bindtap="cancleClick" hidden="{{isHidden}}"></view>
